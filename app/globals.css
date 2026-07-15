@@ -15,3 +15,85 @@ footer{background:var(--night);color:white;padding:130px 7vw 40px}.footer-lead{t
 @media(max-width:1000px){.topbar nav{display:none}.hero-card{display:none}.manifesto-grid{margin-left:15vw}.experience-card,.experience-card.large{height:650px}.collections{grid-template-columns:1fr}.collections-title{position:static}.section-intro{grid-template-columns:1fr 1.6fr}.section-intro>p:last-child{grid-column:2}.round-link{display:none}}
 @media(max-width:700px){.topbar{height:82px;padding:0 20px}.nav-cta{padding:12px;font-size:8px}.nav-cta i{margin-left:5px}.hero{min-height:680px}.hero-copy{left:22px;right:22px;bottom:65px}.hero h1{font-size:64px;line-height:.84}.hero h1 em{margin-left:7vw}.hero-text{font-size:15px}.vertical-note{display:none}.manifesto{padding:90px 22px}.manifesto h2{font-size:57px}.manifesto h2 em{margin-left:0}.manifesto-grid{grid-template-columns:1fr;margin:0 0 80px;gap:15px}.image-story{height:760px}.image-tall{width:72%;height:500px}.image-wide{width:70%;height:300px}.image-quote{left:24%;top:515px;width:72%;background:var(--ivory);padding:20px}.image-quote p{font-size:28px}.experiences{padding:90px 14px}.section-intro{display:block;margin:0 8px 55px}.section-intro h2{font-size:57px;margin-bottom:25px}.experience-grid{grid-template-columns:1fr}.experience-card,.experience-card.large{height:570px}.experience-card>div{left:22px;right:22px;bottom:25px}.experience-card h3{font-size:37px}.signature{height:80svh}.signature>div:last-child{left:22px;right:22px}.signature h2{font-size:58px}.collections{padding:90px 22px}.package-list summary{grid-template-columns:25px 1fr 20px}.package-list summary strong{grid-column:2;font-size:15px}.package-list summary i{grid-column:3;grid-row:1/3}.package-detail{padding:0 0 30px 25px;grid-template-columns:1fr}.package-detail a{grid-column:1}.addons{padding:90px 22px;grid-template-columns:1fr}.travel{padding:90px 22px;grid-template-columns:1fr}.travel-ring{width:72vw;margin:auto}.travel-ring span{font-size:90px}.booking{padding:90px 22px;grid-template-columns:1fr}.booking-number{font-size:135px}.footer-info{grid-template-columns:1fr}.footer-info>div{border-right:0;border-bottom:1px solid #3d3a34}.footer-bottom{flex-direction:column;gap:25px}footer{padding:90px 22px 35px}.footer-lead>a{margin-bottom:70px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Interactive editorial additions */
+.topbar nav{gap:26px}
+.experiences{position:relative;overflow:hidden}
+.rhythm-watermark{position:absolute;right:-2vw;top:12px;font:italic clamp(260px,34vw,540px)/.75 var(--font-display),Georgia,serif;color:rgba(185,148,91,.035);letter-spacing:-.12em;pointer-events:none;user-select:none}
+.section-intro{position:relative;z-index:1;grid-template-columns:.45fr 1.1fr .75fr;align-items:center}
+.rhythm-copy{display:grid;grid-template-columns:116px 1fr;gap:30px;align-items:center}
+.rhythm-copy>p{font-family:Georgia,serif;font-size:15px;line-height:1.65;color:#c5c2b9;margin:0}
+.luxury-seal{width:116px;aspect-ratio:1;border:1px solid var(--line);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;color:var(--gold)}
+.luxury-seal:before,.luxury-seal:after{content:"";position:absolute;border:1px solid rgba(185,148,91,.18);border-radius:50%}.luxury-seal:before{inset:7px}.luxury-seal:after{inset:15px}
+.luxury-seal span{font:italic 35px/1 var(--font-display),Georgia,serif;letter-spacing:-.08em;position:relative;z-index:1}
+.luxury-seal b{font:7px/1 var(--font-sans),Arial,sans-serif;letter-spacing:.32em;margin:7px 0 5px;position:relative;z-index:1}
+.luxury-seal small{font:5px/1 var(--font-sans),Arial,sans-serif;letter-spacing:.22em;color:#8f8069;position:relative;z-index:1}
+
+.experience-card,.experience-card.large{height:auto;position:relative;overflow:hidden;background:#171c18}
+.experience-card summary{list-style:none;cursor:pointer;height:650px;position:relative;overflow:hidden}
+.experience-card.large summary{height:800px}
+.experience-card summary::-webkit-details-marker{display:none}
+.experience-card summary:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,13,10,.9),transparent 68%);pointer-events:none}
+.experience-card summary img{position:absolute;inset:0;height:100%;object-fit:cover;filter:saturate(.64);transition:transform 1.2s ease}
+.experience-card:hover summary img,.experience-card[open] summary img{transform:scale(1.025)}
+.experience-card>.experience-panel{position:static;padding:28px 35px 34px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;background:#141a16;border-top:1px solid rgba(185,148,91,.25);color:#cfcbbf}
+.experience-panel p{font-family:Georgia,serif;font-size:15px;line-height:1.65;margin:0;max-width:550px}
+.experience-panel a{font-size:8px;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);white-space:nowrap}
+.experience-title{position:absolute;z-index:2;left:35px;right:35px;bottom:35px}
+.experience-card .experience-title span{font-size:9px;color:var(--gold);letter-spacing:.15em}
+.experience-title>p{text-transform:uppercase;font-size:9px;letter-spacing:.2em;margin:10px 0}
+.experience-title h3{font-size:44px;margin:0 0 20px}
+.experience-title ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 18px;color:#d1d0ca}
+.experience-title li{font-size:10px}
+.experience-title li:before{content:"—";color:var(--gold);margin-right:7px}
+.discover{position:absolute;z-index:3;right:25px;top:25px;border:1px solid rgba(255,255,255,.45);padding:11px 13px;font:7px/1 var(--font-sans),Arial,sans-serif;text-transform:uppercase;letter-spacing:.17em}
+.discover i{font-style:normal;color:var(--gold);font-size:12px;margin-left:10px;display:inline-block;transition:.3s}
+.experience-card[open] .discover i{transform:rotate(45deg)}
+
+.journey{padding:145px 7vw;background:#d8ccb9;display:grid;grid-template-columns:.8fr 1.2fr;gap:10vw;position:relative;overflow:hidden}
+.journey:after{content:"MT";position:absolute;left:-4vw;bottom:-7vw;font:italic 28vw/.8 var(--font-display),Georgia,serif;color:rgba(17,16,13,.035);letter-spacing:-.12em;pointer-events:none}
+.journey-heading{position:relative;z-index:1}
+.journey-heading h2{font-size:clamp(60px,7vw,102px);line-height:.88;margin:0 0 30px}
+.journey-heading>p:last-child{font-family:Georgia,serif;line-height:1.7;color:#5d554a;max-width:430px}
+.finder{position:relative;z-index:1;align-self:center}
+.finder>input{position:absolute;opacity:0;pointer-events:none}
+.finder-tabs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(17,16,13,.25);margin-bottom:20px}
+.finder-tabs label{cursor:pointer;padding:18px 10px;text-align:center;border-right:1px solid rgba(17,16,13,.22);font-size:8px;text-transform:uppercase;letter-spacing:.14em;transition:.25s}
+.finder-tabs label:last-child{border-right:0}
+#fit-mini:checked~.finder-tabs label[for=fit-mini],#fit-celebration:checked~.finder-tabs label[for=fit-celebration],#fit-brand:checked~.finder-tabs label[for=fit-brand],#fit-full:checked~.finder-tabs label[for=fit-full]{background:var(--night);color:white}
+.finder-results{min-height:390px;position:relative;background:#eee8de;border-top:3px solid var(--gold);box-shadow:0 24px 60px rgba(49,39,24,.11)}
+.finder-results article{position:absolute;inset:0;padding:48px;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s}
+#fit-mini:checked~.finder-results .fit-mini,#fit-celebration:checked~.finder-results .fit-celebration,#fit-brand:checked~.finder-results .fit-brand,#fit-full:checked~.finder-results .fit-full{opacity:1;visibility:visible;transform:none}
+.finder-results small{font-size:8px;text-transform:uppercase;letter-spacing:.2em;color:#7a5c30}
+.finder-results h3{font-size:58px;margin:18px 0 4px}
+.finder-results strong{font:400 17px/1.2 Georgia,serif;color:#775c35}
+.finder-results p{font-family:Georgia,serif;font-size:16px;line-height:1.7;color:#5a544b;max-width:550px;margin:30px 0}
+.finder-results a{font-size:8px;text-transform:uppercase;letter-spacing:.17em;border-bottom:1px solid var(--gold);padding-bottom:7px}
+
+.mini-wordmark{display:flex;align-items:center;gap:14px;margin-bottom:70px;color:#7a5c30}.mini-wordmark span{width:58px;height:58px;border:1px solid var(--gold);display:grid;place-items:center;font:italic 23px Georgia,serif}.mini-wordmark b{font:400 14px Georgia,serif;letter-spacing:.35em}
+.package-list summary h3 sup{display:inline-block;vertical-align:middle;margin-left:8px;padding:5px 7px;border:1px solid var(--gold);font:7px/1 var(--font-sans),Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:#7a5c30}
+
+.media{display:block;width:100%;background-size:cover;background-position:center;background-repeat:no-repeat}
+.hero-bg.media{background-position:center 48%}
+.image-story .media{height:100%;background-size:cover;filter:saturate(.72)}
+.experience-card summary .media{position:absolute;inset:0;height:100%;background-size:cover;filter:saturate(.64);transition:transform 1.2s ease}
+.experience-card:hover summary .media,.experience-card[open] summary .media{transform:scale(1.025)}
+.signature>.media,.signature-shade{position:absolute;inset:0;width:100%;height:100%}
+.signature>.media{background-position:center 45%;filter:saturate(.58)}
+
+@media(max-width:1100px){
+  .section-intro{grid-template-columns:.4fr 1.1fr}.rhythm-copy{grid-column:2;margin-top:15px}
+  .journey{grid-template-columns:1fr;gap:55px}.journey-heading{max-width:800px}
+}
+@media(max-width:700px){
+  .topbar nav{display:none}
+  .rhythm-watermark{font-size:260px;right:-30px;top:70px}
+  .section-intro{display:block}.rhythm-copy{grid-template-columns:92px 1fr;margin-top:35px}.luxury-seal{width:92px}
+  .experience-card summary,.experience-card.large summary{height:570px}
+  .experience-title{left:22px;right:22px;bottom:25px}.experience-title h3{font-size:37px}
+  .experience-card>.experience-panel{grid-template-columns:1fr;padding:25px 22px}.discover{right:15px;top:15px}
+  .journey{padding:90px 22px}.journey-heading h2{font-size:58px}
+  .finder-tabs{grid-template-columns:1fr 1fr}.finder-tabs label:nth-child(2){border-right:0}.finder-tabs label:nth-child(-n+2){border-bottom:1px solid rgba(17,16,13,.22)}
+  .finder-results{min-height:430px}.finder-results article{padding:35px 27px}.finder-results h3{font-size:48px}
+  .mini-wordmark{margin-bottom:45px}
+}
